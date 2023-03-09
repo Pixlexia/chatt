@@ -33,12 +33,13 @@ h2 {
     border-radius: 25px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
     overflow: hidden;
-    padding: 25px;
+    padding: 35px;
     position: relative;
     min-width: 320px;
     width: 920px;
     max-width: 100%;
     margin: 0.5rem;
+
 }
 
 .chat {
@@ -57,7 +58,7 @@ h2 {
     border-radius: 50px;
     box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.144);
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .message.left {
@@ -110,8 +111,65 @@ h2 {
     left: 0;
     right: 0;
     padding: 10px 15px;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 7px;
+
 }
+
+.inputContainer input {
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+#input_button {
+    float: right;
+    height: 2rem;
+    border-radius: 15px;
+    background-color: #3cbfa9;
+    position: absolute;
+    right: 4%;
+    bottom: 0.5%;
+    margin-bottom: 5px;
+    border: none;
+}
+
+#input_button:hover {
+    background-color: #2f9786;
+}
+
+
+.codeBlock textarea.code {
+    display: block;
+    width: 90%;
+    min-height: 5em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: monospace;
+    border: 1px solid #bbb;
+    padding: 1em;
+    white-space: pre-wrap;
+
+}
+
+.content {
+    height: 50vh;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    resize: none;
+    outline: none;
+}
+
+.content:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 
 footer {
     background-color: #222;

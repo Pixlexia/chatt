@@ -12,24 +12,34 @@
 <body>
 
 
+    <code></code>
+
+
+    <nav>
+        <a href="#">Ny chat</a>
+
+    </nav>
+
+
+
     <h2>Chatt GPT</h2>
     <div class="chat-container">
         <ul class="chat">
-            <li class="message left">
+            <!-- <li class="message left">
                 <img class="logo" src="/assets/img/frog-2495709_1280.png" alt="">
                 <p>I LOVE YOU</p>
-            </li>
+            </li> -->
             <li class="message right">
                 <img class="logo" src="/assets/img/evil-2162179_1280.png" alt="">
-                <p> I LOVE YOU 2</p>
+                <p> (USER)första medelandet</p>
             </li>
             <li class="message left">
                 <img class="logo" src="/assets/img/frog-2495709_1280.png" alt="">
-                <p>I LOVE YOU MORE</p>
+                <p>(GTP)Färsta svatert</p>
             </li>
             <li class="message right">
                 <img class="logo" src="/assets/img/evil-2162179_1280.png" alt="">
-                <p>EH! I LOVE YOU THE MOST!</p>
+                <p>Ny fråga typ</p>
             </li>
             <li class="message left">
                 <img class="logo" src="/assets/img/frog-2495709_1280.png" alt="">
@@ -68,8 +78,22 @@
                     Here is an example with small letters and numbers: 0123456789!!!!"&# abc åäö. </p>
             </li>
         </ul>
-        <input type="text" class="text_input" placeholder="What do you want to ask today hottie? 🌺" />
+        <div class="inputContainer"> <input type="text" class="text_input"
+                placeholder="What do you want to ask today hottie? 🌺" />
+            <button id="input_button">send</button>
+        </div>
     </div>
+
+    <div class="codeBlock">
+        <textarea rows=5 cols=100 readonly>Example text with Newlines,
+    tabs & space,
+      html tags etc <b>displayed</b>.
+        However, note that &amp; still acts as an escape char..
+          Eg: &lt;u&gt;(text)&lt;/u&gt;
+    </textarea>
+    </div>
+
+
 
     <footer>
         <p>
