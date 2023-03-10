@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="chatt.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
@@ -17,31 +18,68 @@
 
 
 
+    <div class="menu-sidan">
+        <div class="sidan">
+            <div>
+                <a href="http://">
+                    <!-- <h>Sparade</h> -->
+                    <h2> <i class="uil uil-heart"></i></h2>
+                </a>
+            </div>
+            <!-- <div>
+                <a href="http://">
+                    <h>Historik</h>
+                </a>
+            </div>
+            <div>
+                <a href="http://">
+                    <h>Kategorier</h>
+                </a>
+            </div> -->
+        </div>
+    </div>
     <main>
 
-        <div class="chat-container">
+        <div class="chat-container .scroller">
             <ul class="chat">
 
                 <li class="message right">
-                    <img class="logo" src="/assets/img/evil-2162179_1280.png" alt="">
-                    <p> (USER)första medelandet</p>
+                    <img class="logo" src="/assets/img/14.png" alt="">
+                    <p> (USER) Första medelandet</p>
                 </li>
                 <li class="message left">
                     <img class="logo" src="/assets/img/frog-2495709_1280.png" alt="">
-                    <p>(GTP)Färsta svatert</p>
+                    <p>(GTP) Första svatert</p>
                 </li>
                 <li class="message right">
                     <img class="logo" src="/assets/img/evil-2162179_1280.png" alt="">
                     <p>(USER) "Ny fråga typ"</p>
                 </li>
+
                 <li class="message left">
                     <img class="logo" src="/assets/img/frog-2495709_1280.png" alt="">
                     <p>(GTP) "Andra svaret"
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta architecto, inventore porro
                         explicabo tempore corrupti veniam, velit illo sint distinctio ratione in adipisci, labore
                         eligendi
-                        consequuntur! Perferendis illo quaerat rem!
-                    <div class="codeblock">
+                        consequuntur! Perferendis illo quaerat rem!<!-- 
+                                            - Codeblock med "copy-knapp" -
+
+                                            <div id="myInput" class="codeblock">
+
+                                                <div class="tooltip">
+                                                    <button onclick="myFunction()" onmouseout="outFunc()">
+                                                        <span class="tooltiptext" id="myTooltip"><i class="uil uil-copy"></i></span>
+                                                    </button>
+                                                    
+                                                </div> -->
+                    <div id="myInput" class="codeblock">
+                        <div class="tooltip">
+                            <button onclick="myFunction()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip"><i class="uil uil-copy"></i></span>
+                            </button>
+                        </div>
+                        <!-- random text som ska visas som ex i "codeBlock" -->
                         <.div class="inputContainer">
                             <.form id="form">
                                 <.inp.ut type="text" class="text_input"
@@ -65,9 +103,15 @@
                     <br>
                     Bla bla
                     <div class="codeblock">
+                        <div class="tooltip">
+                            <button onclick="myFunction()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip"><i class="uil uil-copy"></i></span>
+                            </button>
+                        </div>
                         <.div class="inputContainer">
                             <.form id="form">
                                 .inp.ut type="text" class="text_input"
+
                     </div>
                 </li>
 
@@ -86,21 +130,20 @@
                 </li>
             </ul>
     </main>
-
     <!-- <div class="inputContainer">
-         <form>
-            <input type="text" class="text_input" placeholder="What do you want to ask today hottie? 🌺" />
+        <form id="form">
+            <input type="text" class="text_input " placeholder="What do you want to ask today hottie? 🌺" />
             <button id="input_button">Send</button>
-            </form>
+        </form>
     </div> -->
+
     <footer>
         <div class="inputContainer">
-            <form id="form">
-                <input type="text" class="text_input " placeholder="What do you want to ask today hottie? 🌺" />
+            <form>
+                <input type="text" class="text_input" placeholder="What do you want to ask today hottie? 🌺" />
                 <button id="input_button">Send</button>
             </form>
         </div>
-
 
         <!-- <div class="codeBlock">
             <textarea rows=5 cols=100 readonly>Example text with Newlines,
@@ -122,14 +165,22 @@
 
 
 
+    <script>
+        function myFunction() {
+            let copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
 
+            let tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copied: " + copyText.value;
+        }
 
-
-
-
-
-
-
+        function outFunc() {
+            let tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy";
+        }
+    </script>
 </body>
 
 </html>
