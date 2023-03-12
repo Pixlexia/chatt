@@ -1,25 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;1,200;1,500&family=Oswald:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     /* background-color: rgb(17, 17, 17); */
-    /* background-image: url(/assets/img/underwater-2615376_1920.jpg); */
     background-color: pink;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 header {
-    /* background-color: rgba(240, 255, 255, 0.479); */
-    text-align: end;
+    background-color: rgba(236, 234, 234, 0.319);
+    color: rgb(88, 87, 87);
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 0.5rem;
     max-width: 100%;
-    margin-bottom: 1.5rem;
+    min-width: 5rem;
+    height: 2rem;
+    min-height: 2rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.4rem;
+    border-radius: 0px 0px 12px 12px;
+    overflow: hidden;
 }
 
-
+header em {
+    font-size: 0.9rem;
+    margin-left: 15rem;
+}
 
 
 main {
@@ -30,93 +47,64 @@ main {
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    /* display: grid;
-    grid-template-columns: 1fr 0.25fr;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-    grid-gap: 1rem; */
     margin: 1rem;
-
 }
 
-
+/* ================================ - Hjärtknappen/Spara historik. Eventuellt mer "knapapr" kommer- =============- */
 .menu-sidan {
-    /* grid-gap: 1rem; */
-    flex-direction: row;
-    justify-self: start;
     /* background-color: #f7f5f5e1; */
     border-radius: 7px;
-    width: 80%;
-    /* padding: 1.5rem; */
     margin-left: 2.5%;
-    margin-top: 8.5rem;
     position: absolute;
-    grid-column-end: end;
-    /* float: left; */
-    /* margin-left: 90%; */
-    /* z-index: 2; */
-    position: absolute;
-    height: 10%;
+    /* position: sticky; */
 }
 
 .sidan div {
-    /* width: 40%; */
+    width: 2.2rem;
     background-color: #f7f5f5e1;
     border-radius: 7px;
-    gap: 1rem;
-    /* display: inline; */
+    position: absolute;
+    position: sticky;
 }
 
 .sidan i {
     margin-left: 2%;
     font-size: 2rem;
-
     color: rgb(243, 113, 135);
 }
 
-.sidan a {
-    color: #333;
-    margin: 1rem;
-    margin-top: 1rem;
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+/* ================================ - hejärtknapp END  - =============- */
 
 .chat-container {
-    grid-gap: 1rem;
+    /* grid-gap: 1rem;
     grid-column-end: end;
-    flex-direction: column;
-    margin-left: 7%;
-    background-color: rgba(170, 168, 168, 0.4);
+    flex-direction: column; */
+    /* margin-left: 7%; */
     border-radius: 25px;
     box-shadow: 0px 0px 10px 5px rgba(255, 108, 206, 0.7);
-    overflow: hidden;
-    padding-left: 35px;
-    padding-right: 45px;
-    position: relative;
-    max-width: 85%;
-    /* width: 80%; */
-    min-width: 20%;
     padding: 0.5rem;
-    /* height: 400px; */
-    max-height: 80%;
-    min-height: 10%;
-    background-image: url(/assets/img/3.png);
     padding-bottom: 2rem;
+    max-width: 85%;
+    min-width: 85%;
+    height: 80rem;
+    min-height: 50%;
+    max-height: 75%;
+    /* position: relative; */
+    position: absolute;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: pink;
+    background-image: url(/assets/img/3.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    scroll-behavior: smooth;
-    position: absolute;
-    overflow: scroll;
-    scrollbar-color: pink;
+    background-color: #333333a8;
 }
 
 ::-webkit-scrollbar {
     width: 3px;
     height: 0px;
-
 }
 
 ::-webkit-scrollbar-corner {
@@ -151,12 +139,6 @@ main {
     background: #858383ab;
 }
 
-/* .scroller {
-    width: 300px;
-    height: 100px;
-    overflow-y: scroll;
-    scrollbar-color: rebeccapurple green;
-} */
 
 
 .chat {
@@ -225,6 +207,9 @@ main {
     right: 10px;
 }
 
+/* =========-Chatt-Message END-=================== */
+
+
 
 
 .codeblock {
@@ -245,7 +230,7 @@ main {
 
 }
 
-/* ------------input---------------- */
+/* ================================ - input - =============- */
 
 
 .inputContainer {
@@ -255,17 +240,23 @@ main {
     display: flex;
     justify-content: center;
     align-content: center;
-
+    position: relative;
+    /* background-color: #333; */
 }
 
-#form {
+/* =====Radera? Hummm=== */
+/* .inputContainer #form {
+    margin-top: 100%;
+    background-color: yellow;
     display: flex;
     flex-direction: row;
+    z-index: 1;
 }
 
 #form button {
     flex-wrap: nowrap;
-}
+} */
+/* =====Radera? Hummm=== */
 
 .inputContainer input {
     justify-content: center;
@@ -295,17 +286,12 @@ main {
 }
 
 .tooltip button {
-
     padding-left: 2rem;
-    /* margin-top: -70%;
-    margin-left: 250%; */
     background-color: #f79dff00;
     border: none;
     color: rgb(255, 255, 255);
     z-index: 3;
-
 }
-
 
 
 #input_button:hover {
@@ -327,31 +313,4 @@ main {
     box-sizing: border-box;
 }
 
-
-
-
-footer .inputContainer {
-    max-width: 40%;
-
-    /* background-color: #fdf4ff00; */
-    color: #ffffff;
-    font-size: 14px;
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-    /* padding-top: 10px;
-    padding-bottom: 10px; */
-    padding: 2px 3px 12px 2px;
-    z-index: 999;
-    /* background-color: rgba(117, 125, 158, 0.616); */
-    /* background-image: url(/assets/img/360_F_522913609_KG3DNMJ7OMvVkBIpZkEkMdMPUvg9aZrg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; */
-    border-radius: 4rem;
-    margin-top: 0.9rem;
-    margin-left: 30%;
-    margin-bottom: 1rem;
-
-}
+/* ================================ - input END - =============- */
